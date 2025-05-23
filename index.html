@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Saparudin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #94f8bb; /* Hijau muda */
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .welcome-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeInMove 2s forwards;
+        }
+
+        @keyframes fadeInMove {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .moving-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            animation: moveText 3s infinite alternate;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .image-grid img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #000;
+            margin-top: 30px;
+        }
+
+        .certificate-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .certificate {
+            display: flex;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .certificate img {
+            width: 80px; /* Foto kecil */
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .certificate .text {
+            flex: 1;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 14px;
+            color: #555;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media screen and (max-width: 600px) {
+            .certificate {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .certificate img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/pp spr.jpg" alt="Foto Profil" class="profile-img">
+        
+        <h1 class="welcome-text">SELAMAT DATANG DI PORTOPOLIO SAPARUDIN</h1>
+        <p class="moving-text">Pengalaman Organisasi | Prestasi | Pelatihan</p>
+        
+        <!-- Foto bebas bagian atas (2 foto) -->
+        <div class="image-grid" id="imageGridTop">
+            <img src="assets/fixtentngsya.jpg" alt="Foto 1">
+            <img src="assets/keterampilanpribadifixx.jpg" alt="Foto 2">
+        </div>
+
+        <!-- Judul sebelum sertifikat -->
+        <h2 class="section-title">SERTIFIKAT PENGHARGAAN DAN PELATIHAN</h2>
+
+        <!-- Sertifikat dengan foto kecil di kiri -->
+        <div class="certificate-container" id="certificateSection">
+            <div class="certificate">
+                <img src="assets/PIAGAMBPIP.jpg" alt="Sertifikat 1">
+                <div class="text">
+                    <h3>DUTA PANCSILA PURNA PASKIBRAKA</h3>
+                    <p>Penghargaan atas dedikasi dalam menjaga nilai integritas.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_KPK.jpg" alt="Sertifikat 2">
+                <div class="text">
+                    <h3>PELATIHAN PEMUDA & LSM PROVINSI JAWA BARAT</h3>
+                    <p>Diberikan kepada individu yang menunjukkan keterampilan kepemimpinan.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_BBPVP.jpg" alt="Sertifikat 3">
+                <div class="text">
+                    <h3>PELATIHAN PENGOLAHAN SAMPAH BBPVP</h3>
+                    <p>Menghargai kemampuan komunikasi efektif dalam tim.</p>
+                </div>
+            </div><div class="certificate">
+                <img src="assets/Sertifikat_NDT.jpg" alt="Sertifikat 1">
+                <div class="text">
+                    <h3>PELATIHAN NDT & INDUSTRIAL APPLICATION</h3>
+                    <p>Penghargaan atas dedikasi dalam menjaga nilai integritas.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_InspektoratProv.jpg" alt="Sertifikat 2">
+                <div class="text">
+                    <h3>VOLUNTEER HAKORDIA INSPEKTORAT PROVINSI JAWA BARAT 2024</h3>
+                    <p>Diberikan kepada individu yang menunjukkan keterampilan kepemimpinan.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_voll relawan qurban.jpg" alt="Sertifikat 3">
+                <div class="text">
+                    <h3>VOLUNTEER RELEWAN QURBAN NUSANTARA 2024</h3>
+                    <p>Menghargai kemampuan komunikasi efektif dalam tim.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_InpektoratKab.jpg" alt="Sertifikat 1">
+                <div class="text">
+                    <h3>LOMBA CONTENT CREATOR INSPEKTORAT KAB.SUMEDANG</h3>
+                    <p>Penghargaan atas dedikasi dalam menjaga nilai integritas.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_CC.jpg" alt="Sertifikat 2">
+                <div class="text">
+                    <h3>LOKAKARYA CONTENT CREATOR DISPORA JAWA BARAT</h3>
+                    <p>Diberikan kepada individu yang menunjukkan keterampilan kepemimpinan.</p>
+                </div>
+            </div>
+            <div class="certificate">
+                <img src="assets/Sertifikat_CYC.jpg" alt="Sertifikat 3">
+                <div class="text">
+                    <h3>CITARUM YOUTH CAMP 2025</h3>
+                    <p>Menghargai kemampuan komunikasi efektif dalam tim.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Foto bebas bagian bawah (3 foto) -->
+        <div class="image-grid" id="imageGridBottom">
+            <img src="assets/fixtentngsya.jpg" alt="Foto 3">
+            <img src="assets/Keterampilan_Pribadi.jpg" alt="Foto 4">
+            <img src="assets/Keterampilan_Pribadi.jpg" alt="Foto 5">
+            <img src="assets/Keterampilan_Pribadi.jpg" alt="Foto 6">
+        </div>
+
+        <!-- Hak cipta -->
+        <div class="copyright">
+            © 2025 Saparudin. Semua hak dilindungi.
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            let imageGridTop = document.getElementById("imageGridTop");
+            let certificateSection = document.getElementById("certificateSection");
+            let imageGridBottom = document.getElementById("imageGridBottom");
+            let positionTop = imageGridTop.getBoundingClientRect().top;
+            let positionCert = certificateSection.getBoundingClientRect().top;
+            let positionBottom = imageGridBottom.getBoundingClientRect().top;
+            let screenHeight = window.innerHeight;
+            
+            if (positionTop < screenHeight * 0.8) {
+                imageGridTop.classList.add("visible");
+            }
+            if (positionCert < screenHeight * 0.8) {
+                certificateSection.classList.add("visible");
+            }
+            if (positionBottom < screenHeight * 0.8) {
+                imageGridBottom.classList.add("visible");
+            }
+        });
+    </script>
+</body>
+</html>
